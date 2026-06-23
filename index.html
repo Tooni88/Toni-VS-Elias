@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb74d">
+
+    <title>Toni vs Elias</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header class="hero">
+        <div class="sun"></div>
+
+        <h1>🏆 Toni vs Elias</h1>
+        <p>Yatzy Summer Championship</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Totala matcher -->
+        <section class="glass-card">
+            <h2>Totalt antal matcher</h2>
+            <div id="totalMatches" class="big-number">0</div>
+        </section>
+
+        <!-- Vinster -->
+        <section class="wins-grid">
+
+            <div class="glass-card player-card">
+                <h2>Toni</h2>
+                <div id="toniWins" class="score-number">0</div>
+                <p>Vinster</p>
+            </div>
+
+            <div class="glass-card player-card">
+                <h2>Elias</h2>
+                <div id="eliasWins" class="score-number">0</div>
+                <p>Vinster</p>
+            </div>
+
+        </section>
+
+        <!-- Vinstsvit -->
+        <section class="glass-card streak-card">
+            <h2>🔥 Längsta vinstsvit</h2>
+
+            <div id="streakOwner" class="streak-owner">
+                Ingen ännu
+            </div>
+
+            <div id="streakValue" class="streak-number">
+                0
+            </div>
+
+            <p>raka vinster</p>
+        </section>
+
+        <!-- Registrera match -->
+        <section class="glass-card">
+
+            <h2>Registrera match</h2>
+
+            <div class="form-group">
+                <label for="toniScore">Toni poäng</label>
+                <input
+                    type="number"
+                    id="toniScore"
+                    placeholder="Exempel: 245">
+            </div>
+
+            <div class="form-group">
+                <label for="eliasScore">Elias poäng</label>
+                <input
+                    type="number"
+                    id="eliasScore"
+                    placeholder="Exempel: 231">
+            </div>
+
+            <button id="saveBtn">
+                Registrera match
+            </button>
+
+        </section>
+
+        <!-- Historik -->
+        <section class="glass-card">
+
+            <div class="history-header">
+                <h2>Matchhistorik</h2>
+            </div>
+
+            <div id="historyList">
+
+            </div>
+
+        </section>
+
+        <!-- Rensa -->
+        <section class="glass-card danger-card">
+            <button id="resetBtn">
+                Rensa all statistik
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Popup -->
+    <div id="toast" class="toast">
+        Match sparad 🏖️
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
